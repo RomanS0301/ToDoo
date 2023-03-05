@@ -25,9 +25,9 @@ urlpatterns = [
     path('logout', views.logoutuser, name='logoutuser'),
     # todos
     path('', views.home, name='home'),
-    path('create', views.createtodo, name='createtodo'),
+    path('create', views.createtodo, name='createtodo'),  # создание задач
     path('current/', views.currenttodos, name='currenttodos'),  # страница текущего пользователя
-
+    path('todo/<int:todo_pk>', views.viewtodo, name='viewtodo'),  # получение информации о конкретной записи
 
 
 ]
