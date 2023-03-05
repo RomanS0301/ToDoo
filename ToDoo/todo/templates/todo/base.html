@@ -1,0 +1,18 @@
+
+{% if user.is_authenticated %}
+Пользователь <b>{{ user.username }}</b>  зашёл на сайт
+
+ <a href="#">Выход</a>
+
+{% else %}
+
+<a href="#">Регистрация</a>
+    <br>
+<a href="#">Вход</a>
+
+
+{% endif %}
+<br>
+<br>
+
+{% block content %}{% endblock %}
