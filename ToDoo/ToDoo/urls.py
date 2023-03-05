@@ -28,6 +28,6 @@ urlpatterns = [
     path('create', views.createtodo, name='createtodo'),  # создание задач
     path('current/', views.currenttodos, name='currenttodos'),  # страница текущего пользователя
     path('todo/<int:todo_pk>', views.viewtodo, name='viewtodo'),  # получение информации о конкретной записи
-
-
+    path('todo/<int:todo_pk>/complete', views.complitetodo, name='complitetodo'),  # Задача выполнена
+    path('todo/<int:todo_pk>/delete', views.deletetodo, name='deletetodo'),  # удаление задач
 ]
